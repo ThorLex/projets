@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="formulaire.css">
+    <link rel="stylesheet" href="feuille.css">
+</head>
+<body>
+    <div class="corps">
+              <div class="formulaire" name="formulaire">
+                  <div class="titre">Inscription</div>
+                    <form action="inscription_post.php" method="POST" name="form1" >
+                    <div class="input-nom-prenom" >
+                          <div class="titre-input1" >
+                          <p class="titre">Prenom</p>
+                          <input type="text" name="Prenom" class="form-control"   oninput="change(this)" required>
+                        </div>
+                    <div class="titre-input2" >
+                    <p class="titre">Nom</p>
+                    <input type="text" name="Nom" oninput="change(this)" class="form-control" required>
+                    </div>
+                  </div>  
+            <div class="titre-input" >
+                <p class="titre">Matricule</p>
+               <input type="text" name="Matricule" class="form-control"oninput="change(this)" pattern="^[0-9]{6}"  required>
+            </div>
+          
+      <div class="input-nom-prenom" >
+                <div class="titre-input1" >
+                <p class="titre">Numero </p>
+           <input type="tel" pattern="^[0-9]{8}" class="form-control" oninput="change(this)" name="Numero" required >
+               </div>
+                <div class="titre-input2" >
+                <p class="titre">Email</p>
+           <input type="email" name="email" class="form-control"  oninput="change(this)" placeholder="Ex:you@gmail.com"  pattern="(^[a-z0-9]+)@([a-z0-9])+(\.)([a-z]{2,4})" required>
+
+                </div>
+            </div>  
+         
+      <div class="titre-input" >
+        <p class="titre">Date de naissance</p>
+       <input type="date" class="form-control" oninput="change(this)" name="dateNaissance">
+</div>
+  <div class="titre-input" >
+        <p class="titre">Password</p>
+       <input type="password"  name="Password" oninput="change(this)" class="form-control" required >   
+  </div>
+  <p class="titre">Genre</p>
+  <div class="genre" ><label for="Genre"  class="titre">Masculin</label>
+    <input type="radio" value="masculin" name="Genre" oninput="change(this)" class="form-control"  required>
+    <label for="Genre" class="titre">Feminin</label>
+    <input type="radio" value="feminin" name="Genre" class="form-control" oninput="change(this)" required>
+    <label for="Genre" class="titre" >Personalisée</label>
+    <input type="radio" value="Personalise" name="Genre" class="form-control" oninput="change(this)" required> 
+</div>  
+
+    
+
+
+</div>
+</form>
+<!-- on commence a partir d'ici -->
+<div class="code_qr">
+      <img class="qrious">
+     
+<div class="information">
+   <p style="color:blue"> Valeur:</p>
+   <p> Ici la valeur du code qr</p>
+</div>
+</div>
+  </div>
+   
+</div>
+<script src="qrious.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
